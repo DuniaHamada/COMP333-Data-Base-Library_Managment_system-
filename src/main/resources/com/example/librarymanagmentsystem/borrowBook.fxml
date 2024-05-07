@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFDD0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagmentsystem.BorrowController">
+   <children>
+      <TextField fx:id="searchMemberTF" layoutX="29.0" layoutY="278.0" />
+
+      <VBox layoutX="498.0" layoutY="336.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+         <children>
+            <ImageView fx:id="memberImageView" fitHeight="118.0" fitWidth="126.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@member.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="categoryTF11" alignment="TOP_LEFT" editable="false" style="-fx-background-color: #FFFDD0;" text="Member details">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <mouseTransparent>true</mouseTransparent>
+            </TextField>
+            <TextField fx:id="memberIdTF" style="-fx-background-color: #FFFDD0;" />
+            <TextField fx:id="memberNameTF" style="-fx-background-color: #FFFDD0;" />
+            <TextField fx:id="memberEmailTF" style="-fx-background-color: #FFFDD0;" />
+         </children>
+      </VBox>
+      <VBox layoutX="498.0" layoutY="58.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #FFFDD0;">
+         <children>
+            <ImageView fx:id="bookImageView" fitHeight="131.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@book.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="categoryTF1" alignment="TOP_LEFT" editable="false" style="-fx-background-color: #FFFDD0;" text="Book Details">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="bookIdTF" style="-fx-background-color: #FFFDD0;" />
+            <TextField fx:id="bookNameTF" style="-fx-background-color: #FFFDD0;" />
+            <TextField fx:id="categoryTF" style="-fx-background-color: #FFFDD0;" />
+         </children>
+      </VBox>
+      <ImageView fx:id="searchBookImage" fitHeight="25.0" fitWidth="38.0" layoutX="393.0" layoutY="280.0" onMouseClicked="#searchBook" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@search.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="searchMemberImage" fitHeight="25.0" fitWidth="38.0" layoutX="184.0" layoutY="278.0" onMouseClicked="#searchMember" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@search.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="borrowingImage" fitHeight="52.0" fitWidth="90.0" layoutX="161.0" layoutY="494.0" onMouseClicked="#borrowBook" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@borrowing.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="445.0" layoutY="12.0" orientation="VERTICAL" prefHeight="577.0" prefWidth="2.0" />
+      <TextField layoutX="61.0" layoutY="87.0" prefHeight="52.0" prefWidth="235.0" style="-fx-background-color: #FFFDD0;" text="Borrowing Book">
+         <font>
+            <Font name="Book Antiqua Bold" size="25.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="234.0" layoutY="235.0" style="-fx-background-color: #FFFDD0;" text="Search the Book by ID" />
+      <TextField fx:id="searchBookTF" layoutX="234.0" layoutY="280.0" />
+      <TextField layoutX="29.0" layoutY="235.0" prefHeight="25.0" prefWidth="149.0" promptText="Search the member by ID" style="-fx-background-color: #FFFDD0;" text="Search the member by ID" />
+      <TextField layoutX="29.0" layoutY="405.0" prefHeight="25.0" prefWidth="149.0" promptText="Borrowing date" style="-fx-background-color: #FFFDD0;" text="Borrowing date" />
+      <TextField fx:id="borrowingDateTF" layoutX="29.0" layoutY="448.0" promptText="Day/Month/year" />
+      <TextField layoutX="244.0" layoutY="405.0" prefHeight="25.0" prefWidth="149.0" promptText="Search the member by ID" style="-fx-background-color: #FFFDD0;" text="Due Date" />
+      <TextField fx:id="DueDateTF" layoutX="244.0" layoutY="448.0" promptText="Day/Month/Year" />
+      <Separator layoutX="72.0" layoutY="139.0" prefHeight="3.0" prefWidth="260.0" style="-fx-background-color: brown;" />
+      <Separator layoutX="463.0" layoutY="304.0" prefHeight="3.0" prefWidth="279.0" />
+      <ImageView fx:id="BACK" fitHeight="40.0" fitWidth="39.0" layoutX="742.0" layoutY="12.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

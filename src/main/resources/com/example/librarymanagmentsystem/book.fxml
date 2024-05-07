@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagmentsystem.BookController">
+    <VBox layoutX="24.0" layoutY="44.0" prefHeight="312.0" prefWidth="242.0">
+        <children>
+            <Label text="Book ID:" />
+            <TextField fx:id="bookIdTF" prefHeight="24.0" prefWidth="115.0" />
+
+            <Label text="Title:" />
+            <TextField fx:id="titleTF" />
+
+            <Label text="ISBN:" />
+            <TextField fx:id="ISBNTF" />
+
+            <Label text="EDITION NO:" />
+            <TextField fx:id="EDITIONTF" />
+
+            <Label text="No of pages:" />
+            <TextField fx:id="NoofpagesTF" />
+
+            <Label text="AUTHOR:" />
+            <TextField fx:id="AUTHORTF" />
+
+            <Label text="PUBLISHER:" />
+            <TextField fx:id="PUBLISHERTF" />
+
+            <Label text="Category:" />
+            <TextField fx:id="CategoryTF" />
+
+            <Label text="Availability:" />
+            <TextField fx:id="AvailabilityTF" />
+        </children>
+    </VBox>
+
+    <TableView fx:id="table_Book" layoutX="364.0" layoutY="54.0" onMouseClicked="#getSelectCell" prefHeight="392.0" prefWidth="809.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="90.0" text="id" />
+            <TableColumn fx:id="titleCoulmn" prefWidth="90.0" text="title" />
+            <TableColumn fx:id="isbnColumn" prefWidth="90.0" text="ISBN" />
+            <TableColumn fx:id="EditionNoColumn" prefWidth="90.0" text="Edition No" />
+            <TableColumn fx:id="noOfPagesColumn" prefWidth="90.0" text="No of pages" />
+            <TableColumn fx:id="authorColumn" prefWidth="90.0" text="author" />
+            <TableColumn fx:id="publisherColumn" prefWidth="90.0" text="publisher" />
+            <TableColumn fx:id="categoryColumn" prefWidth="90.0" text="Category" />
+            <TableColumn fx:id="availabilityColumn" prefWidth="90.0" text="availability" />
+        </columns>
+    </TableView>
+    <!-- Add Book ImageView -->
+    <ImageView fx:id="addImageView" fitHeight="38.0" fitWidth="38.0" layoutX="223.0" layoutY="459.0" onMouseClicked="#addBook" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <!-- Replace this with the path to your image file for Add Book -->
+            <Image url="@addbook.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fx:id="listImageView" fitHeight="150.0" fitWidth="175.0" layoutX="20.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@book.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fx:id="updateImageView" fitHeight="38.0" fitWidth="38.0" layoutX="38.0" layoutY="459.0" onMouseClicked="#updateBook" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@update.jpg" />
+        </image>
+    </ImageView>
+
+    <Label layoutX="848.0" layoutY="498.0" text="Search Book by ID:" />
+    <TextField fx:id="searchBookTF" layoutX="848.0" layoutY="533.0" />
+
+    <ImageView fx:id="searchImageView" fitHeight="20.0" fitWidth="20.0" layoutX="1038.0" layoutY="533.0" onMouseClicked="#searchBook" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@search.png" />
+        </image>
+    </ImageView>
+
+    <Label layoutX="423.0" layoutY="503.0" text="Delete Book by ID:" />
+    <TextField fx:id="deleteBookTF" layoutX="423.0" layoutY="533.0" />
+
+    <ImageView fx:id="deleteImageView" fitHeight="20.0" fitWidth="20.0" layoutX="589.0" layoutY="535.0" onMouseClicked="#deleteBook" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@delete.png" />
+        </image>
+    </ImageView>
+   <ImageView fx:id="back" fitHeight="38.0" fitWidth="29.0" layoutX="1151.0" layoutY="14.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@return.png" />
+      </image>
+   </ImageView>
+
+</AnchorPane>

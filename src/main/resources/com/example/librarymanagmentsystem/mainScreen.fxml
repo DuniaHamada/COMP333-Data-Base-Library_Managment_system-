@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagmentsystem.MainController">
+    <children>
+        <StackPane layoutX="33.0" layoutY="308.0" onMouseClicked="#handleBookClick" />
+
+        <!-- ImageView for member -->
+        <StackPane layoutX="497.0" layoutY="308.0" onMouseClicked="#handleMemberClick" />
+
+        <!-- ImageView for author -->
+        <StackPane layoutX="148.0" layoutY="308.0" onMouseClicked="#handleAuthorClick" />
+
+        <!-- ImageView for publisher -->
+        <StackPane layoutX="358.0" layoutY="316.0" onMouseClicked="#handlePublisherClick" />
+
+        <!-- ImageView for borrowing -->
+        <StackPane layoutX="258.0" layoutY="316.0" onMouseClicked="#handleBorrowingClick" />
+        <ImageView fitHeight="113.0" fitWidth="106.0" layoutX="880.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Qattanlogo.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="246.0" fitWidth="374.0" layoutX="332.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@library.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="107.0" fitWidth="442.0" layoutX="276.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@text.PNG" />
+            </image>
+        </ImageView>
+        <Separator layoutX="17.0" layoutY="414.0" prefHeight="3.0" prefWidth="963.0" style="-fx-background-color: BLACK;" />
+        <Label layoutX="89.0" layoutY="554.0" text="BOOK" />
+        <Label layoutX="207.0" layoutY="552.0" prefHeight="22.0" prefWidth="48.0" text="AUTHOR" />
+        <Label layoutX="517.0" layoutY="554.0" text="BORROWING" />
+        <Label layoutX="701.0" layoutY="555.0" text="PUBLISHER" />
+        <Label layoutX="858.0" layoutY="555.0" prefHeight="17.0" prefWidth="54.0" text="MEMBER" />
+         <ImageView fx:id="member" fitHeight="91.0" fitWidth="89.0" layoutX="842.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="@member.jpg" />
+             </image>
+         </ImageView>
+         <ImageView fx:id="publisher" fitHeight="107.0" fitWidth="146.0" layoutX="657.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="@housing.png" />
+             </image>
+         </ImageView>
+         <ImageView fx:id="borrowing" fitHeight="91.0" fitWidth="90.0" layoutX="507.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="@borrowing.png" />
+             </image>
+         </ImageView>
+         <ImageView fx:id="author" fitHeight="105.0" fitWidth="101.0" layoutX="207.0" layoutY="441.0" onMouseClicked="#handleAuthorClick" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="@auther.jpeg" />
+             </image>
+         </ImageView>
+         <ImageView fx:id="book" fitHeight="91.0" fitWidth="91.0" layoutX="69.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="@book.png" />
+             </image>
+         </ImageView>
+      <Label layoutX="343.0" layoutY="552.0" prefHeight="22.0" prefWidth="83.0" text="Return Book" />
+      <ImageView fx:id="returnBook" fitHeight="91" fitWidth="86" layoutX="343.0" layoutY="441.0" onMouseClicked="#returnBook" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="report" fitHeight="91.0" fitWidth="91.0" layoutX="44.0" layoutY="263.0" onMouseClicked="#report" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@report.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,7 @@
+/* styles.css */
+
+/* The ID should match the ID of the AnchorPane in your FXML file */
+#myAnchorPane {
+    -fx-background-image: url('qattan.jpg');
+    -fx-background-size: cover;
+}

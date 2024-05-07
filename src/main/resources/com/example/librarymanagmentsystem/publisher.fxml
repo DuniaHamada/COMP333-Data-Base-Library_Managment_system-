@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagmentsystem.PublisherController">
+    <VBox layoutX="70.0" layoutY="83.0" prefHeight="214.0" prefWidth="245.0">
+        <children>
+            <Label text="Publisher ID:" />
+            <TextField fx:id="publisherIDTF" prefHeight="24.0" prefWidth="115.0" />
+
+            <Label text="name:" />
+            <TextField fx:id="nameTF" />
+
+            <Label text="address" />
+            <TextField fx:id="addressTF" />
+
+            <Label text="Email:" />
+            <TextField fx:id="emailTF" />
+
+            <Label text="phone:" />
+            <TextField fx:id="phoneTF" />
+        </children>
+    </VBox>
+
+    <TableView fx:id="table_Publisher" layoutX="381.0" layoutY="76.0" onMouseClicked="#getSelectCell" prefHeight="316.0" prefWidth="456.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="90.0" text="publisher ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="90.0" text="Name" />
+            <TableColumn fx:id="addressColumn" prefWidth="90.0" text="address" />
+            <TableColumn fx:id="emailColumn" prefWidth="90.0" text="Email" />
+            <TableColumn fx:id="phoneColumn" prefWidth="90.0" text="phone" />
+        </columns>
+    </TableView>
+    <!-- Add Book ImageView -->
+    <ImageView fx:id="addImageView" fitHeight="38.0" fitWidth="38.0" layoutX="244.0" layoutY="327.0" onMouseClicked="#addPublisher" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <!-- Replace this with the path to your image file for Add Book -->
+            <Image url="@add.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fx:id="listImageView" fitHeight="128.0" fitWidth="217.0" layoutX="54.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@housing.png" />
+        </image>
+    </ImageView>
+
+    <Label layoutX="672.0" layoutY="495.0" text="Search seach by ID:" />
+    <TextField fx:id="searchPublisherTF" layoutX="672.0" layoutY="521.0" />
+
+    <ImageView fx:id="searchImageView" fitHeight="20.0" fitWidth="20.0" layoutX="839.0" layoutY="525.0" onMouseClicked="#searchPublisher" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@search.png" />
+        </image>
+    </ImageView>
+
+    <Label layoutX="381.0" layoutY="495.0" text="Delete publisher by ID:" />
+    <TextField fx:id="deletePublisherTF" layoutX="381.0" layoutY="523.0" />
+
+    <ImageView fx:id="deleteImageView" fitHeight="20.0" fitWidth="20.0" layoutX="553.0" layoutY="526.0" onMouseClicked="#deletePublisher" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@delete.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="back" fitHeight="38.0" fitWidth="29.0" layoutX="834.0" layoutY="27.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@return.png" />
+        </image>
+    </ImageView>
+
+          <ImageView fx:id="updateImageView" fitHeight="38.0" fitWidth="38.0" layoutX="85.0" layoutY="329.0" onMouseClicked="#updatePublisher" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@update.jpg" />
+        </image>
+    </ImageView>
+
+</AnchorPane>
